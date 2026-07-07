@@ -3,22 +3,6 @@
 Source for our [lab website](https://psl-ntu.github.io). Built with
 [Hugo](https://gohugo.io) and deployed to GitHub Pages.
 
-## How the site is organized
-
-| Path | What it holds |
-|------|---------------|
-| `content/_index.md` | Home page: headline + **News** list (edit the bullet list at the bottom) |
-| `content/research.md` | Research / projects page |
-| `content/publications.md` | Publications page (renders `data/publications.yaml`) |
-| `content/people.md` | People page (PI + students) |
-| `content/teaching.md`, `content/join.md` | Teaching and Join Us pages |
-| `data/publications.yaml` | The publication list — **edit this to add/change papers** |
-| `data/research_areas.yaml` | The three research-area cards on the home page |
-| `static/static/images/people/` | Headshots |
-| `static/static/pub/papers/` | Paper PDFs |
-| `static/css/psl.css` | Site styling |
-| `hugo.yaml` | Site config (title, menu, footer) |
-
 ## Run and test locally
 
 You need **Hugo v0.163.1 or newer**.
@@ -87,7 +71,25 @@ minute or two after your change lands on `main`.
 
 ---
 
-## Adding a publication
+
+
+## How the site is organized
+
+| Path | What it holds |
+|------|---------------|
+| `content/_index.md` | Home page: headline + **News** list (edit the bullet list at the bottom) |
+| `content/research.md` | Research / projects page |
+| `content/publications.md` | Publications page (renders `data/publications.yaml`) |
+| `content/people.md` | People page (PI + students) |
+| `content/teaching.md`, `content/join.md` | Teaching and Join Us pages |
+| `data/publications.yaml` | The publication list — **edit this to add/change papers** |
+| `data/research_areas.yaml` | The three research-area cards on the home page |
+| `static/static/images/people/` | Headshots |
+| `static/static/pub/papers/` | Paper PDFs |
+| `static/css/psl.css` | Site styling |
+| `hugo.yaml` | Site config (title, menu, footer) |
+
+### Adding a publication
 
 Add an entry to the top of `papers:` in `data/publications.yaml`:
 
@@ -110,6 +112,6 @@ Add an entry to the top of `papers:` in `data/publications.yaml`:
 Buttons render only for the links you provide. The paper title links to the
 first available of `doi`, `arxiv`, `pdf`, `project`, `code`.
 
-## Updating the News feed
+### Updating the News feed
 
 Edit the bullet list at the bottom of `content/_index.md`. Newest first.
