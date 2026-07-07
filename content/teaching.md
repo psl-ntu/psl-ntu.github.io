@@ -5,7 +5,7 @@ layout = "single"
 
 ## Teaching
 
-The lab's PI teaches two undergraduate courses each year at NTU's College of Computing and Data Science (CCDS):
+I teach two undergraduate courses each year at NTU's College of Computing and Data Science (CCDS):
 
 - **SC4050 Parallel Computing** (Semester 1)
 - **SC4064 GPU Programming** (Semester 2)

@@ -6,6 +6,7 @@ lede = "We build high-performance I/O, parallel file systems, GPU-optimized runt
 +++
 
 - **Jul 2026** — Three papers accepted: SC x1, CLUSTER x1, ICPP x1.
+- **Jun 2026** — Excited to share that our [cluster competition team](https://ntuhpc.org) placed 3rd in the in-person competition and 2nd in the online competition at ISC'26!
 - **Dec 2025** — We are chairing the [ESSA'26 Workshop](https://sites.google.com/view/essa-2026/home) (Extreme-Scale Storage and Analysis), held with IPDPS in New Orleans, US. Submission site is open (deadline: Jan. 23, 2026); [CFP here](https://sites.google.com/view/essa-2026/cfp).
 - **Dec 2025** — The [UnifyFS and DYAD tutorial](https://wangchen.io/unifyfs-dyad-tutorial) (Jan. 26, Osaka, Japan, SCA/HPCAsia'26) site is live.
 - **Nov 2025** — Our PDC paper "Data Management in the Continuum: Cross-facility Object-based Data Transfers" received the Recognition Award at SBAC-PAD 2025! More about [PDC here](https://pdc.readthedocs.io).

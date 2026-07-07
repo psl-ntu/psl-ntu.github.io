@@ -15,7 +15,8 @@ layout = "single"
 
 Before joining NTU, I was the Fernbach Postdoc Fellow at Lawrence Livermore National Laboratory, working with Dr. Kathryn Mohror. I completed my Ph.D. in Computer Science at the University of Illinois Urbana-Champaign, advised by Prof. Marc Snir. 
 
-Contact: *chen.wang AT ntu.edu.sg*
+Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
+
   </div>
 </div>
 
