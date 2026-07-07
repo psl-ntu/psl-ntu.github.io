@@ -12,9 +12,13 @@
     <header class="nav">
       <div class="wrap">
         <a class="brand" href="{{ "/" | relURL }}">
-          <span class="mark">P</span>
+          <img class="mark" src="{{ "static/images/psl_icon.png" | relURL }}" alt="Parallel Systems Lab logo">
           <span class="b-text">Parallel Systems Lab<small>NTU · College of Computing &amp; Data Science</small></span>
         </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-burger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </label>
         <nav class="menu">
           {{ $current := . }}
           {{ range .Site.Menus.main }}
