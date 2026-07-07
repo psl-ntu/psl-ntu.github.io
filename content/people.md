@@ -42,9 +42,9 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   </div>
 
   <div class="person">
-    <img class="headshot" src="/static/images/people/placeholder.svg" alt="Mulin Li">
+    <img class="headshot" src="/static/images/people/limulin.jpg" alt="Mulin Li">
     <div class="p-body">
-      <div class="p-name"><a>Mulin Li</a></div>
+      <div class="p-name"><a href="https://scholar.google.com/citations?user=rKq39NQAAAAJ&hl=zh-CN" target="_blank">Mulin Li</a></div>
       <div class="p-role">Ph.D. Student</div>
     </div>
   </div>
