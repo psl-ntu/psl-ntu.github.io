@@ -1,0 +1,11 @@
+- kicker: "// Parallel Computing"
+  title: "HPC & Parallel I/O"
+  desc: "High-performance data systems, storage consistency semantics, parallel file systems, and I/O for large-scale HPC and AI workloads."
+
+- kicker: "// gpu"
+  title: "AI Systems & GPU Optimization"
+  desc: "Efficient training and inference infrastructure, GPU kernel optimization, and memory and compute scheduling."
+
+- kicker: "// agents"
+  title: "Agentic AI4S Workflow"
+  desc: "Systems support for agentic AI-for-science workflows, orchestration, and efficient memory operations for LLM agents."

@@ -1,0 +1,9 @@
+    <footer class="site">
+      <div class="wrap">
+        {{ with .Site.Params.footer }}
+        <div class="fnote">{{ replace . "{Year}" now.Year | markdownify }}</div>
+        {{ end }}
+      </div>
+    </footer>
+  </body>
+</html>

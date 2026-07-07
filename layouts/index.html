@@ -1,0 +1,107 @@
+{{ partial "header.html" . }}
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">{{ .Params.eyebrow | default "Parallel Computing × AI Systems" }}</div>
+    <h1 class="hero-title">{{ .Params.headline | default "Systems infrastructure for the <em>HPC–AI</em> era." | safeHTML }}</h1>
+    <p class="lede">{{ .Params.lede | default "We build high-performance I/O, parallel file systems, GPU-optimized runtimes, and systems support for agentic AI." | safeHTML }}</p>
+    <div class="meta-row">
+      <span>PI · <b>Chen Wang</b></span>
+      <span>Dept · <b>CCDS, NTU</b></span>
+      <span>Focus · <b>HPC I/O · GPU · AI Systems</b></span>
+    </div>
+    <div class="cta-row">
+      <a href="{{ "publications" | relURL }}" class="btn btn-primary">Read our research</a>
+      <a href="{{ "join" | relURL }}" class="btn btn-ghost">Join the lab →</a>
+    </div>
+  </div>
+</section>
+
+{{ with .Site.Data.research_areas }}
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-kicker">01 — Research</span>
+        <h2>What we work on</h2>
+      </div>
+      <a href="{{ "research" | relURL }}" class="sec-link">all projects →</a>
+    </div>
+    <div class="cards">
+      {{ range . }}
+      <div class="card">
+        <span class="kicker">{{ .kicker }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .desc }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Content }}
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-kicker">02 — Lab</span>
+        <h2>News</h2>
+      </div>
+    </div>
+    <article class="prose full news">
+      {{ . }}
+    </article>
+  </div>
+</section>
+{{ end }}
+
+{{ $highlights := where (sort (index .Site.Data.publications "papers") "year" "desc") "highlight" true }}
+{{ with $highlights }}
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-kicker">03 — Selected work</span>
+        <h2>Highlight papers</h2>
+      </div>
+      <a href="{{ "publications" | relURL }}" class="sec-link">full list →</a>
+    </div>
+    <div class="featured">
+      {{ range . }}
+      {{ $yy := printf "%02d" (int (mod .year 100)) }}
+      <article class="feat">
+        <div class="fig{{ if not .image }} fig-ph{{ end }}"{{ with .image }} style="background-image:url('{{ . | relURL }}');"{{ end }}>
+          {{ if not .image }}<span class="fig-label">{{ .venue }}<br>'{{ $yy }}</span>{{ end }}
+        </div>
+        <div class="feat-body">
+          <div class="pub-meta">
+            <span class="venue">{{ .venue }} '{{ $yy }}</span>
+            {{ with .award }}<span class="award-chip">★ {{ . }}</span>{{ end }}
+            {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
+          </div>
+          <h3 class="feat-title">
+            {{- $url := "" -}}
+            {{- with .links }}{{ $url = or .pdf .project .code .doi }}{{ end -}}
+            {{ if $url }}<a href="{{ $url | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+          </h3>
+          <p class="authors">{{ .authors }}</p>
+          {{ with .summary }}<p class="feat-summary">{{ . }}</p>{{ end }}
+          {{ with .links }}
+          <div class="links">
+            {{ with .pdf }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>PDF</a>{{ end }}
+            {{ with .code }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Code</a>{{ end }}
+            {{ with .slides }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>Slides</a>{{ end }}
+            {{ with .doi }}<a class="lnk" href="{{ . }}"><span class="dot"></span>DOI</a>{{ end }}
+            {{ with .project }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Project</a>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "footer.html" . }}

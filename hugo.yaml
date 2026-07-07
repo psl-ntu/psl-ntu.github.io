@@ -1,0 +1,56 @@
+baseurl: "https://psl-ntu.github.io/"
+languageCode: "en-us"
+title: "Parallel Systems Lab"
+theme: "hugo-xmin"
+googleAnalytics: ""
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  note: "/note/:year/:month/:day/:slug/"
+  blog: "/blog/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: Research
+      url: "research"
+      weight: 2
+    - name: Publications
+      url: "publications"
+      weight: 3
+    - name: People
+      url: "people"
+      weight: 4
+    - name: Teaching
+      url: "teaching"
+      weight: 5
+    - name: Join Us
+      url: "join"
+      weight: 6
+
+params:
+  description: "Parallel Systems Lab (PSL) @ NTU — systems research at the intersection of HPC and AI."
+  footer: "&copy; Parallel Systems Lab, NTU. {Year}. | [GitHub](https://github.com/psl-ntu) | PI: [Chen Wang](https://wangchen.io)"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    <link rel="icon" type="image/png" href="{{ "static/images/psl_icon.png" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/psl.css" | relURL }}" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="{{ "/" | relURL }}">
+          <span class="mark">P</span>
+          <span class="b-text">Parallel Systems Lab<small>NTU · College of Computing &amp; Data Science</small></span>
+        </a>
+        <nav class="menu">
+          {{ $current := . }}
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL | relLangURL }}"{{ if $current.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a>
+          {{ end }}
+        </nav>
+      </div>
+    </header>

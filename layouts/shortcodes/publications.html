@@ -1,0 +1,30 @@
+{{- $papers := sort (index .Site.Data.publications "papers") "year" "desc" -}}
+<div class="pubs">
+  {{- range $papers }}
+  <article class="pub">
+    <div class="year">{{ .year }}</div>
+    <div class="pub-body">
+      <h3 class="pub-title">
+        {{- $url := "" -}}
+        {{- with .links }}{{ $url = or .pdf .project .code .doi }}{{ end -}}
+        {{ if $url }}<a href="{{ $url | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+      </h3>
+      <p class="authors">{{ .authors }}</p>
+      <div class="pub-meta">
+        <span class="venue">{{ .venue }} '{{ printf "%02d" (int (mod .year 100)) }}</span>
+        {{ with .award }}<span class="award-chip">★ {{ . }}</span>{{ end }}
+        {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
+        {{ with .links }}
+        <span class="links">
+          {{ with .pdf }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>PDF</a>{{ end }}
+          {{ with .code }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Code</a>{{ end }}
+          {{ with .slides }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>Slides</a>{{ end }}
+          {{ with .doi }}<a class="lnk" href="{{ . }}"><span class="dot"></span>DOI</a>{{ end }}
+          {{ with .project }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Project</a>{{ end }}
+        </span>
+        {{ end }}
+      </div>
+    </div>
+  </article>
+  {{- end }}
+</div>
