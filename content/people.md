@@ -26,7 +26,9 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
 
 <!--
   To add a headshot: drop a square photo in static/static/images/people/
-  (e.g. mulin-li.jpg) and change the <img src="..."> to /static/images/people/mulin-li.jpg
+  (e.g. your-name.jpg) and change the <img src="..."> to /static/images/people/your-name.jpg
+  The name is a placeholder link. To activate it, add an href to the <a> tag, e.g.
+  <a href="https://www.linkedin.com/in/...">Name</a> (add target="_blank" to open in a new tab).
   Copy a <div class="person"> block for each new student.
 -->
 <div class="people">
@@ -34,7 +36,7 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   <div class="person">
     <img class="headshot" src="/static/images/people/placeholder.svg" alt="Wenzhao Wu">
     <div class="p-body">
-      <div class="p-name">Wenzhao Wu</div>
+      <div class="p-name"><a>Wenzhao Wu</a></div>
       <div class="p-role">Ph.D. Student</div>
     </div>
   </div>
@@ -42,7 +44,7 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   <div class="person">
     <img class="headshot" src="/static/images/people/placeholder.svg" alt="Mulin Li">
     <div class="p-body">
-      <div class="p-name">Mulin Li</div>
+      <div class="p-name"><a>Mulin Li</a></div>
       <div class="p-role">Ph.D. Student</div>
     </div>
   </div>
@@ -50,7 +52,7 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   <div class="person">
     <img class="headshot" src="/static/images/people/placeholder.svg" alt="Haoxuan Wang">
     <div class="p-body">
-      <div class="p-name">Haoxuan Wang</div>
+      <div class="p-name"><a>Haoxuan Wang</a></div>
       <div class="p-role">Research Assistant</div>
     </div>
   </div>
@@ -58,7 +60,7 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   <div class="person">
     <img class="headshot" src="/static/images/people/placeholder.svg" alt="Jiaying Sun">
     <div class="p-body">
-      <div class="p-name">Jiaying Sun</div>
+      <div class="p-name"><a>Jiaying Sun</a></div>
       <div class="p-role">CSC Exchange</div>
     </div>
   </div>
