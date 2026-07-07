@@ -8,7 +8,7 @@
     <div class="meta-row">
       <span>PI · <b>Chen Wang</b></span>
       <span>Dept · <b>CCDS, NTU</b></span>
-      <span>Focus · <b>HPC I/O · GPU · AI Systems</b></span>
+      <span>Focus · <b>HPC · I/O · GPU · AI Systems</b></span>
     </div>
     <div class="cta-row">
       <a href="{{ "publications" | relURL }}" class="btn btn-primary">Read our research</a>
@@ -82,17 +82,18 @@
           </div>
           <h3 class="feat-title">
             {{- $url := "" -}}
-            {{- with .links }}{{ $url = or .pdf .project .code .doi }}{{ end -}}
+            {{- with .links }}{{ $url = or .doi .arxiv .pdf .project .code }}{{ end -}}
             {{ if $url }}<a href="{{ $url | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
           </h3>
           <p class="authors">{{ .authors }}</p>
           {{ with .summary }}<p class="feat-summary">{{ . }}</p>{{ end }}
           {{ with .links }}
           <div class="links">
+            {{ with .doi }}<a class="lnk" href="{{ . }}"><span class="dot"></span>DOI</a>{{ end }}
+            {{ with .arxiv }}<a class="lnk" href="{{ . }}"><span class="dot"></span>arXiv</a>{{ end }}
             {{ with .pdf }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>PDF</a>{{ end }}
             {{ with .code }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Code</a>{{ end }}
             {{ with .slides }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>Slides</a>{{ end }}
-            {{ with .doi }}<a class="lnk" href="{{ . }}"><span class="dot"></span>DOI</a>{{ end }}
             {{ with .project }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Project</a>{{ end }}
           </div>
           {{ end }}

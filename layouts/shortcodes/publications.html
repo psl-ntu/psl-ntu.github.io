@@ -6,7 +6,7 @@
     <div class="pub-body">
       <h3 class="pub-title">
         {{- $url := "" -}}
-        {{- with .links }}{{ $url = or .pdf .project .code .doi }}{{ end -}}
+        {{- with .links }}{{ $url = or .doi .arxiv .pdf .project .code }}{{ end -}}
         {{ if $url }}<a href="{{ $url | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
       </h3>
       <p class="authors">{{ .authors }}</p>
@@ -16,10 +16,11 @@
         {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
         {{ with .links }}
         <span class="links">
+          {{ with .doi }}<a class="lnk" href="{{ . }}"><span class="dot"></span>DOI</a>{{ end }}
+          {{ with .arxiv }}<a class="lnk" href="{{ . }}"><span class="dot"></span>arXiv</a>{{ end }}
           {{ with .pdf }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>PDF</a>{{ end }}
           {{ with .code }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Code</a>{{ end }}
           {{ with .slides }}<a class="lnk" href="{{ . | relURL }}"><span class="dot"></span>Slides</a>{{ end }}
-          {{ with .doi }}<a class="lnk" href="{{ . }}"><span class="dot"></span>DOI</a>{{ end }}
           {{ with .project }}<a class="lnk" href="{{ . }}"><span class="dot"></span>Project</a>{{ end }}
         </span>
         {{ end }}

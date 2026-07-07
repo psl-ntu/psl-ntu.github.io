@@ -1,7 +1,8 @@
 # Parallel Systems Lab — publications
 # Each entry: title, authors, venue, year, tags[], optional award, and
-# links{ pdf, code, slides, doi, project }. Links are optional; buttons render only
+# links{ doi, arxiv, pdf, code, slides, project }. Links are optional; buttons render only
 # when present. PDF paths are relative to /static (files live in static/static/pub/...).
+# The `doi` link points to the official publisher record (DOI / IEEE Xplore / ACM DL).
 #
 # Featured on the home page: set `highlight: true`, plus (optional but recommended)
 #   summary: "1–2 sentences on what the paper does and its main contribution"
@@ -10,23 +11,73 @@
 # Put figure images in static/static/pub/figs/.
 
 papers:
+  # --- Preprints (venue: arXiv) ---
+  - title: "HieraSparse: Hierarchical Semi-Structured Sparse KV Attention"
+    authors: "Haoxuan Wang, Chen Wang"
+    venue: "SC"
+    year: 2026
+    tags: [llm-systems, gpu, sparse-attention]
+    highlight: true
+    summary: "We compress the LLM attention KV cache by mapping a hierarchical, semi-structured sparsity pattern onto GPU sparse tensor cores. We turn that sparsity into real speedup in both the prefill and decode phases, reaching up to 4.57× faster attention than unstructured-sparsity methods at the same sparsity level, with a tunable quality/sparsity tradeoff."
+    # image: "static/pub/figs/hierasparse.png"
+    links:
+      arxiv: "https://arxiv.org/abs/2604.16864"
+      code: "https://github.com/psl-ntu/HieraSparse"
+
+  - title: "FBench: A Flexible Benchmark for CFG-Based What-If Exploration of HPC I/O Patterns"
+    authors: "Zhaobin Zhu, Chen Wang, Kathryn Mohror, Sarah Neuwirth"
+    venue: "arXiv"
+    year: 2026
+    tags: [i/o-benchmark, hpc]
+    links:
+      arxiv: "https://arxiv.org/abs/2606.30197"
+
+  - title: "Recorder: Comprehensive Parallel I/O Tracing and Analysis"
+    authors: "Chen Wang, Izzet Yildirim, Hariharan Devarajan, Kathryn Mohror, Marc Snir"
+    venue: "arXiv"
+    year: 2025
+    tags: [parallel-io, tracing]
+    links:
+      arxiv: "https://arxiv.org/abs/2501.04654"
+      code: "https://github.com/uiuc-hpc/Recorder"
+
+  - title: "Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey"
+    authors: "Hammad Ather, Jean Luca Bez, Chen Wang, Hank Childs, Allen D. Malony, Suren Byna"
+    venue: "arXiv"
+    year: 2025
+    tags: [parallel-io, survey]
+    links:
+      arxiv: "https://arxiv.org/abs/2501.00203"
+
+  - title: "Kilometer-Scale E3SM Land Model Simulation over North America"
+    authors: "Dali Wang, Chen Wang, Qinglei Cao, Peter Schwartz, Fengming Yuan, Jayesh Krishna, Danqing Wu, Daniel Ricciuto, Peter Thornton, Shih-Chieh Kao, Michele Thornton, Kathryn Mohror"
+    venue: "arXiv"
+    year: 2025
+    tags: [hpc, earth-system-modeling]
+    links:
+      arxiv: "https://arxiv.org/abs/2501.11141"
+
+  # --- Peer-reviewed ---
   - title: "VerifyIO: Verifying Adherence to Parallel I/O Consistency Semantics"
     authors: "Chen Wang, Zhaobin Zhu, Kathryn Mohror, Sarah Neuwirth, Marc Snir"
     venue: "IPDPS"
     year: 2025
     tags: [parallel-io, verification]
     highlight: true
-    summary: "A trace-driven framework that checks whether parallel I/O programs actually follow the consistency semantics of the underlying storage system. We formalize storage consistency models and use Recorder traces to automatically verify adherence — exposing violations in production I/O libraries that were previously invisible."
+    summary: "We build a trace-driven framework that checks whether parallel I/O programs actually follow the consistency semantics of the underlying storage system. We formalize storage consistency models and use Recorder traces to automatically verify adherence, exposing violations in production I/O libraries that were previously invisible."
     # image: "static/pub/figs/verifyio.png"   # optional: drop a figure here
     links:
       pdf: "static/pub/papers/25-IPDPS-VerifyIO.pdf"
       code: "https://github.com/wangvsa/VerifyIO"
+      doi: "https://ieeexplore.ieee.org/document/11078511/"
 
   - title: "SmartIO: A Lightweight End-to-End Workflow for Runtime I/O Optimization of HPC Systems"
     authors: "Hammad Ather, Chen Wang, Hariharan Devarajan, Hank Childs, Kathryn Mohror"
     venue: "PDSW"
     year: 2025
     tags: [i/o-optimization, hpc]
+    links:
+      doi: "https://doi.org/10.1145/3731599.3767509"
 
   - title: "Data Without Borders: Seamless Cross-Facility Data Movement using Object Data Management Runtime"
     authors: "Jean Luca Bez, Houjun Tang, Chen Wang, Suren Byna"
@@ -40,18 +91,24 @@ papers:
     year: 2025
     award: "SCALE Challenge Finalist"
     tags: [hpc, scalability]
+    links:
+      doi: "https://doi.org/10.1109/CCGridW65158.2025.00050"
 
   - title: "Advancing HPC Performance Modeling with an Interactive, Automated and Tool-Agnostic ML-Driven Workflow"
     authors: "Zhaobin Zhu, Chen Wang, Sarah Neuwirth"
     venue: "SSDBM"
     year: 2025
     tags: [performance-modeling, ml]
+    links:
+      doi: "https://doi.org/10.1145/3733723.3733740"
 
   - title: "XIO: Toward eXplainable I/O for HPC Systems"
     authors: "Sarah Neuwirth, Hariharan Devarajan, Chen Wang, Jay Lofstead"
     venue: "SSDBM"
     year: 2025
     tags: [explainable-io, hpc]
+    links:
+      doi: "https://doi.org/10.1145/3733723.3733741"
 
   - title: "DYAD: Locality-aware Data Management for Accelerating Deep Learning Training"
     authors: "Hariharan Devarajan, Ian Lumsden, Chen Wang, Konstantia Georgouli, Jae-Seung Yeom, Michela Taufer"
@@ -60,6 +117,7 @@ papers:
     tags: [data-management, deep-learning]
     links:
       code: "https://github.com/flux-framework/dyad"
+      doi: "https://ieeexplore.ieee.org/document/10763599/"
 
   - title: "Object-Centric Data Management in HPC Workflows — A Case Study"
     authors: "Chen Wang, Houjun Tang, Jean Luca Bez, Suren Byna"
@@ -81,10 +139,19 @@ papers:
     year: 2024
     tags: [consistency, file-systems]
     highlight: true
-    summary: "Formal definitions for the full spectrum of consistency models used by parallel file systems, unifying semantics that were previously specified only informally. We compare the models side by side and quantify the performance cost of stronger guarantees."
+    summary: "We give formal definitions for the full spectrum of consistency models used by parallel file systems, unifying semantics that were previously specified only informally. We compare the models side by side and quantify the performance cost of stronger guarantees."
     # image: "static/pub/figs/consistency-models.png"
     links:
       pdf: "static/pub/papers/24-TPDS-Consistency-Study.pdf"
+      doi: "https://doi.org/10.1109/TPDS.2024.3391058"
+
+  - title: "I/O Characterization and Performance Evaluation of Large-Scale Storage Architectures for Heterogeneous Workloads"
+    authors: "Olga Kogiou, Hariharan Devarajan, Chen Wang, Weikuan Yu, Kathryn Mohror"
+    venue: "CLUSTER-W"
+    year: 2023
+    tags: [storage, characterization]
+    links:
+      doi: "https://ieeexplore.ieee.org/document/10321910/"
 
   - title: "Near-Lossless MPI Tracing and Proxy Application Autogeneration"
     authors: "Chen Wang, Yanfei Guo, Pavan Balaji, Marc Snir"
@@ -94,6 +161,7 @@ papers:
     links:
       pdf: "static/pub/papers/22-TPDS-Pilgrim.pdf"
       code: "https://github.com/pmodels/pilgrim"
+      doi: "https://ieeexplore.ieee.org/document/9925630/"
 
   - title: "Pilgrim: Scalable and (near) Lossless MPI Tracing"
     authors: "Chen Wang, Pavan Balaji, Marc Snir"
@@ -101,11 +169,12 @@ papers:
     year: 2021
     tags: [mpi, tracing]
     highlight: true
-    summary: "A scalable, near-lossless MPI tracing tool that records over 400 MPI functions with their full parameters and compresses traces online using a novel pattern-recognition algorithm — capturing more detail than prior tools at a fraction of the storage."
+    summary: "We build a scalable, near-lossless MPI tracing tool that records over 400 MPI functions with their full parameters and compresses traces online using a novel pattern-recognition algorithm. It captures more detail than prior tools at a fraction of the storage."
     # image: "static/pub/figs/pilgrim.png"
     links:
       pdf: "static/pub/papers/21-SC-Pilgrim.pdf"
       code: "https://github.com/pmodels/pilgrim"
+      doi: "https://doi.org/10.1145/3458817.3476151"
 
   - title: "Verifying I/O Synchronization from MPI Traces"
     authors: "Sushma Yellapragada, Chen Wang, Marc Snir"
@@ -114,17 +183,16 @@ papers:
     tags: [parallel-io, verification]
     links:
       pdf: "static/pub/papers/21-PDSW-Verify-IO.pdf"
+      doi: "https://ieeexplore.ieee.org/document/9651261/"
 
   - title: "File System Semantics Requirements of HPC Applications"
     authors: "Chen Wang, Kathryn Mohror, Marc Snir"
     venue: "HPDC"
     year: 2021
     tags: [file-systems, semantics]
-    highlight: true
-    summary: "An empirical study of the file-system consistency that real HPC applications actually require. Using whole-stack I/O traces, we show most applications never depend on strict POSIX consistency — making the case for relaxed, higher-performance storage semantics."
-    # image: "static/pub/figs/semantics-requirements.png"
     links:
       pdf: "static/pub/papers/21-HPDC-Semantics-Requirements.pdf"
+      doi: "https://doi.org/10.1145/3431379.3460637"
 
   - title: "Understanding and Finding Crash-Consistency Bugs in Parallel File Systems"
     authors: "Jinghan Sun, Chen Wang, Jian Huang, Marc Snir"
@@ -142,6 +210,7 @@ papers:
     links:
       pdf: "static/pub/papers/20-ESSA-Recorder2.pdf"
       code: "https://github.com/uiuc-hpc/Recorder"
+      doi: "https://ieeexplore.ieee.org/document/9150354/"
 
   - title: "GMSA: A Data Sharing System for Multiple Sequence Alignment across Multiple Users"
     authors: "Na Bai, Shanjiang Tang, Ce Yu, Hao Fu, Chen Wang, Xi Chen"
@@ -150,6 +219,7 @@ papers:
     tags: [bioinformatics, systems]
     links:
       pdf: "static/pub/papers/19-Curr-Bio-GMSA.pdf"
+      doi: "https://doi.org/10.2174/1574893614666190111160101"
 
   - title: "Neural Network Based Silent Error Detector"
     authors: "Chen Wang, Nikoli Dryden, Franck Cappello, Marc Snir"
@@ -157,11 +227,9 @@ papers:
     year: 2018
     award: "Best Paper"
     tags: [resilience, ml-for-systems]
-    highlight: true
-    summary: "A neural-network approach to detecting silent data corruption in HPC applications. By learning the expected behavior of program values and flagging anomalies, it catches otherwise-invisible errors at runtime with low overhead."
-    # image: "static/pub/figs/sdc-detector.png"
     links:
       pdf: "static/pub/papers/18-CLUSTER-SDC.pdf"
+      doi: "https://ieeexplore.ieee.org/document/8514878/"
 
   - title: "CMSA: A Heterogeneous CPU/GPU Computing System for Multiple Similar RNA/DNA Sequence Alignment"
     authors: "Xi Chen, Chen Wang, Shanjiang Tang, Ce Yu, Quan Zou"
@@ -170,6 +238,7 @@ papers:
     tags: [gpu, bioinformatics]
     links:
       pdf: "static/pub/papers/17-BMC-Bio-CMSA.pdf"
+      doi: "https://doi.org/10.1186/s12859-017-1725-6"
 
   - title: "A General and Fast Distributed System for Large-Scale Dynamic Programming Applications"
     authors: "Chen Wang, Ce Yu, Shanjiang Tang, Jian Xiao, Jizhou Sun, Xiangfei Meng"
@@ -178,6 +247,7 @@ papers:
     tags: [distributed-systems, dynamic-programming]
     links:
       pdf: "static/pub/papers/16-Parallel-Computing-DPX10.pdf"
+      doi: "https://www.sciencedirect.com/science/article/pii/S016781911630103X"
 
   - title: "DPX10: An Efficient X10 Framework for Dynamic Programming Applications"
     authors: "Chen Wang, Ce Yu, Jizhou Sun, Xiangfei Meng"
@@ -186,3 +256,4 @@ papers:
     tags: [x10, dynamic-programming]
     links:
       pdf: "static/pub/papers/15-ICPP-DPX10.pdf"
+      doi: "https://ieeexplore.ieee.org/document/7349642/"
