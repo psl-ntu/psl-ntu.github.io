@@ -17,12 +17,6 @@ hugo server -D
 
 Open <http://localhost:1313/>. The site live-reloads as you save files.
 
-## Deploying
-
-Just push to Github. A GitHub Actions workflow
-(`.github/workflows/hugo.yaml`) builds the site and publishes it to
-<https://psl-ntu.github.io> automatically. There is no manual build/upload step.
-
 ---
 
 ## Guide for students: update your photo and links
@@ -115,3 +109,10 @@ first available of `doi`, `arxiv`, `pdf`, `project`, `code`.
 ### Updating the News feed
 
 Edit the bullet list at the bottom of `content/_index.md`. Newest first.
+
+### Deploying
+
+Just push to Github. A GitHub Actions workflow
+(`.github/workflows/hugo.yaml`) builds the site and publishes it to
+<https://psl-ntu.github.io> automatically. There is no manual build/upload step.
+
