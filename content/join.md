@@ -16,7 +16,7 @@ Our research areas include, but are not limited to:
 * Performance Modeling & Analysis
 * Distributed Storage Systems & Parallel File Systems
 
-We have **PhD scholarship** and **Research Assistant (RA)** positions available for the **Spring and Fall 2027** intake.
+We have **PhD scholarship** and **RA** positions available for the **Spring and Fall 2027** intake.
 
 **PhD applicants.** Candidates must, at a minimum, meet NTU's admission requirements. Please refer to the official NTU [admission guide](https://www.ntu.edu.sg/admissions/graduate/radmissionguide) for details.
 Competitive applicants typically have a strong academic background and research experience. While not a formal requirement, successful candidates generally have **at least one publication in a reputable second-tier (or higher) venue**.
