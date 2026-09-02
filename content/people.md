@@ -34,9 +34,9 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
 <div class="people">
 
   <div class="person">
-    <img class="headshot" src="/static/images/people/placeholder.svg" alt="Wenzhao Wu">
+    <img class="headshot" src="/static/images/people/wenzhao-wu.jpg" alt="Wenzhao Wu">
     <div class="p-body">
-      <div class="p-name"><a>Wenzhao Wu</a></div>
+      <div class="p-name"><a href="https://scholar.google.com/citations?user=91WzthEAAAAJ" target="_blank">Wenzhao Wu</a></div>
       <div class="p-role">Ph.D. Student</div>
     </div>
   </div>
@@ -50,9 +50,9 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   </div>
 
   <div class="person">
-    <img class="headshot" src="/static/images/people/placeholder.svg" alt="Haoxuan Wang">
+    <img class="headshot" src="/static/images/people/haoxuan.jpg" alt="Haoxuan Wang">
     <div class="p-body">
-      <div class="p-name"><a>Haoxuan Wang</a></div>
+      <div class="p-name"><a href="https://github.com/botbw" target="_blank">Haoxuan Wang</a></div>
       <div class="p-role">Research Assistant</div>
     </div>
   </div>
@@ -71,13 +71,30 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
 
 ---
 
-### Student Cluster Competition Team
+### NTU HPC-AI Club
 
-<!-- TODO: fill in undergraduate researchers and SCC team members. -->
-<!--
-- **Full Name** — Undergraduate researcher / SCC team. Working on <topic>.
--->
-We co-advise NTU's [Student Cluster Competition team](https://ntuhpc.org).
+NTU HPC-AI Club ([Website](https://ntuhpc.org), [LinkedIn](https://sg.linkedin.com/company/ntu-hpc)) is a student-run club under CCDS. Driven by curiosity and a hands-on philosophy,
+members build and tune real cluster systems, compete in international student cluster competitions, and develop deep expertise
+across the full computing stack — from Linux and job schedulers to GPU workloads and AI applications.
+
+I co-advise the club alongside faculty colleagues. The team competes at [ISC High Performance](https://www.isc-hpc.com/), 
+[SC](https://supercomputing.org/), [ASC](http://www.asc-events.org/), and the APAC HPC-AI Competition, and has accumulated
+**27+ awards** over 12+ years of operation. Recent highlights include a **1st place finish at ISC 2026** (onsite) and
+2nd place in the ISC 2026 virtual competition.
+
+<div class="club-photos">
+  <!-- Drop competition photos into static/static/images/club/ and update the src paths below. -->
+  <!-- Suggested: a team group shot, a cluster build/competition floor shot, an award ceremony shot. -->
+  <figure>
+    <img src="/static/images/club/photo1.jpeg" alt="NTU HPC/AI team">
+  </figure>
+  <figure>
+    <img src="/static/images/club/photo2.jpeg" alt="NTU HPC/AI team">
+  </figure>
+  <figure>
+    <img src="/static/images/club/photo3.jpeg" alt="NTU HPC/AI team">
+  </figure>
+</div>
 
 
 <!-- ### Alumni -->
