@@ -58,9 +58,9 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   </div>
 
   <div class="person">
-    <img class="headshot" src="/static/images/people/placeholder.svg" alt="Jiaying Sun">
+    <img class="headshot" src="/static/images/people/jiaying-sun.jpg" alt="Jiaying Sun">
     <div class="p-body">
-      <div class="p-name"><a>Jiaying Sun</a></div>
+      <div class="p-name"><a href="https://github.com/JiayingSun163" target="_blank">Jiaying Sun</a></div>
       <div class="p-role">CSC Exchange</div>
     </div>
   </div>
