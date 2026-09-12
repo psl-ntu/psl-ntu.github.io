@@ -20,7 +20,6 @@ Our research areas include, but are not limited to:
 ### Open positions
 
 * **Research Assistant / Research Associate.** We have an immediate opening. See the full description and apply through the official [NTU Careers posting](https://ntu.wd3.myworkdayjobs.com/Careers/job/NTU-Main-Campus-Singapore/Research-Assistant-Research-Associate--Computer-Science-_R00025707).
-* **Research Fellow (Postdoc).** We have an opening for a postdoc to work on **confidential computing for modern computer architectures**, co-advised by [Xiaofeng Wang](https://wangxiaofeng7.github.io/). If you are interested, please email the PI with your CV.
 * **PhD scholarship.** Positions are available for the **Fall 2027** intake (see requirements below).
 
 **PhD applicants.** Candidates must, at a minimum, meet NTU's admission requirements. Please refer to the official NTU [admission guide](https://www.ntu.edu.sg/admissions/graduate/radmissionguide) for details.
