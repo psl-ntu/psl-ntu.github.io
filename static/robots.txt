@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://psl-ntu.github.io/sitemap.xml

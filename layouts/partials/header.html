@@ -3,10 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    <meta name="google-site-verification" content="AOUEzIr6ZHi_LiSB1H_t0pqNR9wrczr7J4iKn-_tCpc" />
+    {{ $title := cond .IsHome (printf "%s (PSL) @ NTU | Chen Wang" .Site.Title) (printf "%s | %s" .Title .Site.Title) }}
+    <title>{{ $title }}</title>
+    {{ $desc := .Params.description | default .Site.Params.description }}
+    <meta name="description" content="{{ $desc }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $desc }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:image" content="{{ "static/images/psl_icon.png" | absURL }}">
+    <meta name="twitter:card" content="summary">
+
     <link rel="icon" type="image/png" href="{{ "static/images/psl_icon.png" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/psl.css" | relURL }}" />
+
+    {{ if .IsHome }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chen Wang",
+      "givenName": "Chen",
+      "familyName": "Wang",
+      "jobTitle": "Assistant Professor",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Nanyang Technological University",
+        "department": "College of Computing and Data Science"
+      },
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Nanyang Technological University"
+      },
+      "url": "https://psl-ntu.github.io/",
+      "sameAs": [
+        "https://dr.ntu.edu.sg/entities/person/Chen-Wang",
+        "https://wangchen.io",
+        "https://scholar.google.com/citations?user=BtN6CZgAAAAJ&hl=en",
+        "https://www.linkedin.com/in/chenw5",
+        "https://github.com/psl-ntu"
+      ]
+    }
+    </script>
+    {{ end }}
   </head>
   <body>
     <header class="nav">

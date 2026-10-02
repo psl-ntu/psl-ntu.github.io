@@ -1,6 +1,7 @@
 +++
 title = "People"
 layout = "single"
+description = "Chen Wang is an Assistant Professor at NTU's College of Computing and Data Science (CCDS) and leads the Parallel Systems Lab (PSL). Previously a Fernbach Postdoctoral Fellow at Lawrence Livermore National Laboratory; PhD from the University of Illinois Urbana-Champaign."
 +++
 
 ## People

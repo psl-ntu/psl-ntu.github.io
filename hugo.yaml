@@ -33,7 +33,7 @@ menu:
       weight: 6
 
 params:
-  description: "Parallel Systems Lab (PSL) @ NTU — systems research at the intersection of HPC and AI."
+  description: "Parallel Systems Lab (PSL) at NTU, led by Chen Wang (Assistant Professor, College of Computing and Data Science). Systems research at the intersection of HPC and AI."
   footer: "&copy; Parallel Systems Lab, NTU. {Year}. | [GitHub](https://github.com/psl-ntu) | PI: [Chen Wang](https://wangchen.io)"
 
 markup:
