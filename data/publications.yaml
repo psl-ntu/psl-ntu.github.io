@@ -24,14 +24,6 @@ papers:
       arxiv: "https://arxiv.org/abs/2604.16864"
       code: "https://github.com/psl-ntu/HieraSparse"
 
-  - title: "FBench: A Flexible Benchmark for CFG-Based What-If Exploration of HPC I/O Patterns"
-    authors: "Zhaobin Zhu, Chen Wang, Kathryn Mohror, Sarah Neuwirth"
-    venue: "arXiv"
-    year: 2026
-    tags: [i/o-benchmark, hpc]
-    links:
-      arxiv: "https://arxiv.org/abs/2606.30197"
-
   - title: "Recorder: Comprehensive Parallel I/O Tracing and Analysis"
     authors: "Chen Wang, Izzet Yildirim, Hariharan Devarajan, Kathryn Mohror, Marc Snir"
     venue: "arXiv"
@@ -58,6 +50,31 @@ papers:
       arxiv: "https://arxiv.org/abs/2501.11141"
 
   # --- Peer-reviewed ---
+  - title: "Sharing a Fabric with Collective Communication: Two Storage Penalties in Deep Learning Training"
+    authors: "Chen Wang, Wenzhao Wu, Hyojin Kim, Jae-Sung Yeom"
+    venue: "PDSW"
+    year: 2026
+    tags: [parallel-io, deep-learning]
+    links:
+      arxiv: "https://arxiv.org/abs/2609.06506"
+      code: "https://github.com/psl-ntu/nccl_io_bench"
+
+  - title: "FBench: A Flexible Benchmark for CFG-Based What-If Exploration of HPC I/O Patterns"
+    authors: "Zhaobin Zhu, Chen Wang, Kathryn Mohror, Sarah Neuwirth"
+    venue: "HiPC"
+    year: 2026
+    tags: [i/o-benchmark, hpc]
+    links:
+      arxiv: "https://arxiv.org/abs/2606.30197"
+
+  - title: "TDLight: A Framework for Incremental Light-curve Management and Continuous Classification Optimization"
+    authors: "Xu Yu, Ce Yu, Zhaohui Shao, Chen Wang, Bin Yang"
+    venue: "ApJS"
+    year: 2026
+    tags: [data-management, astronomy]
+    links:
+      arxiv: "https://arxiv.org/abs/2511.18784"
+
   - title: "VerifyIO: Verifying Adherence to Parallel I/O Consistency Semantics"
     authors: "Chen Wang, Zhaobin Zhu, Kathryn Mohror, Sarah Neuwirth, Marc Snir"
     venue: "IPDPS"
