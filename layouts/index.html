@@ -71,9 +71,9 @@
       {{ range . }}
       {{ $yy := printf "%02d" (int (mod .year 100)) }}
       <article class="feat">
-        <div class="fig{{ if not .image }} fig-ph{{ end }}"{{ with .image }} style="background-image:url('{{ . | relURL }}');"{{ end }}>
-          {{ if not .image }}<span class="fig-label">{{ .venue }}<br>'{{ $yy }}</span>{{ end }}
-        </div>
+        {{ with .image }}
+        <div class="fig" style="background-image:url('{{ . | relURL }}');"></div>
+        {{ end }}
         <div class="feat-body">
           <div class="pub-meta">
             <span class="venue">{{ .venue }} '{{ $yy }}</span>

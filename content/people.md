@@ -59,13 +59,36 @@ Contact: <ins>*chen.wang AT ntu.edu.sg*</ins>
   </div>
 
   <div class="person">
-    <img class="headshot" src="/static/images/people/jiaying-sun.jpg" alt="Jiaying Sun">
+    <img class="headshot" src="/static/images/people/placeholder.svg" alt="Jiabao Guo">
     <div class="p-body">
-      <div class="p-name"><a href="https://github.com/JiayingSun163" target="_blank">Jiaying Sun</a></div>
-      <div class="p-role">CSC Exchange</div>
+      <div class="p-name"><a>Jiabao Guo</a></div>
+      <div class="p-role">Research Fellow</div>
     </div>
   </div>
 
+  <div class="person">
+    <img class="headshot" src="/static/images/people/jiaying-sun.jpg" alt="Jiaying Sun">
+    <div class="p-body">
+      <div class="p-name"><a href="https://github.com/JiayingSun163" target="_blank">Jiaying Sun</a></div>
+      <div class="p-role">Visiting Student</div>
+    </div>
+  </div>
+
+  <div class="person">
+    <img class="headshot" src="/static/images/people/placeholder.svg" alt="Huizhao Feng">
+    <div class="p-body">
+      <div class="p-name"><a>Huizhao Feng</a></div>
+      <div class="p-role">Visiting Student</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="club-photos">
+  <figure>
+    <img src="/static/images/people/2026-10-01-ICPP26-dinner.jpeg" alt="PSL group photo, ICPP 2026">
+    <figcaption>ICPP '26 group dinner</figcaption>
+  </figure>
 </div>
 
 <!-- *We are recruiting. See [Join Us](/join).* -->
