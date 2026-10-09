@@ -5,6 +5,7 @@ headline = "Systems infrastructure for the <em>HPC–AI</em> era."
 lede = "We build high-performance I/O, parallel file systems, GPU-optimized runtimes, and systems support for agentic AI — the foundations that let large-scale computing and modern AI workloads run efficiently."
 +++
 
+- **Oct 2026** — Honored to receive the [Amazon Research Award](https://www.amazon.science/research-awards) (Spring 2026 call)!
 - **Jul 2026** — Three papers accepted: SC x1, CLUSTER x1, ICPP x1.
 - **Jun 2026** — Excited to share that our [cluster competition team](https://ntuhpc.org) placed **1st in the in-person competition** and 2nd in the online competition at ISC'26!
 - **Dec 2025** — We are chairing the [ESSA'26 Workshop](https://sites.google.com/view/essa-2026/home) (Extreme-Scale Storage and Analysis), held with IPDPS in New Orleans, US. Submission site is open (deadline: Jan. 23, 2026); [CFP here](https://sites.google.com/view/essa-2026/cfp).
